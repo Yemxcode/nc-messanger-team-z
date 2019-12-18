@@ -1,5 +1,5 @@
 const { userData, chatroomData, messageData } = require("../data/index");
-const {makeRefObj} = require("../utils/utils")
+const {makeRefObj, formatMessages} = require("../utils/utils")
 
 exports.seed = function(knex) {
   return knex.migrate
@@ -18,9 +18,12 @@ exports.seed = function(knex) {
       ]);
     })
     .then(([users, chatrooms]) => {
-      
+      console.log(users)
+     const chatRef = makeRefObj(chatrooms)
+     const formattedMessages = formatMessages(messageData, chatRef)
+     console.log(formattedMessages) 
        return knex("messages")
-        .insert(messageData)
+        .insert(formattedMessages)
         .returning("*");
     })
 
