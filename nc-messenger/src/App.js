@@ -4,7 +4,7 @@ import * as api from "./api";
 import Login from "./Components/Login";
 import Signup from "./Components/Signup";
 import { Router } from "@reach/router";
-import socketIOClient from "socket.io-client";
+// import socketIOClient from "socket.io-client";
 
 class App extends React.Component {
   state = {
@@ -28,9 +28,9 @@ class App extends React.Component {
     // .then(user => {
     //   this.setState({ user: user });
     // });
-    const { endpoint } = this.state;
-    const socket = socketIOClient(endpoint);
-    socket.on("FromAPI", data => this.setState({ user: data }));
+    // const { endpoint } = this.state;
+    // const socket = socketIOClient(endpoint);
+    // socket.on("FromAPI", data => this.setState({ user: data }));
   }
 }
 
