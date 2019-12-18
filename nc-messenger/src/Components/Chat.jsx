@@ -14,6 +14,13 @@ export default function Chat ({location, profileImg}) {
   socket = io(ENDPOINT);
   setUsername(username);
   setRoom(room)
+  setProfileImg(profileImg)
+  socket.emit('join', {name, room}, () => {});
+
+  return () => {
+   socket.emit('disconnect');
+   socket.off();
+  }
  }, [ENDPOINT, location.search])
  return (
   <></>
