@@ -4,12 +4,13 @@ import * as api from "./api";
 import Login from "./Components/Login";
 import Signup from "./Components/Signup";
 import { Router } from "@reach/router";
-// import socketIOClient from "socket.io-client";
 
 class App extends React.Component {
   state = {
-    user: false,
-    endpoint: false /*"http://127.0.0.1:4001"*/
+    user: '',
+    users: [],
+    endpoint: false /*"http://127.0.0.1:4001"*/,
+    rooms: []
   };
 
   render() {
