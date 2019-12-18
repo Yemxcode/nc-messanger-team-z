@@ -1,3 +1,7 @@
+body {
+  background-color: beige;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +39,61 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.loginForm {
+  max-width: 50%;
+  min-width: 10%;
+  background-color: aliceblue;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  position: fixed;
+  z-index: 10;
+  padding: 15% 6%;
+  margin: 9% 25%;
+}
+
+.loginForm input {
+  margin: 2%;
+  padding: 5% 3%;
+  border: 1px dotted;
+}
+
+.loginForm button {
+  margin: 5% 2%;
+  background: none;
+  background-color: rgb(224, 154, 22);
+  color: aliceblue;
+  border: none;
+  border-radius: 5%;
+  box-shadow: 0px 0px 10px 0px rgb(224, 154, 22, 0.6);
+  padding: 5% 15%;
+}
+
+.signUpDirect {
+  background-color: rgba(55, 0, 128, 0.7);
+  background-image: 
+  /* linear-gradient(
+      to bottom,
+      rgba(245, 246, 252, 0.52),
+      rgba(117, 19, 93, 0.73)
+    ), */ url("https://www.designshock.com/wp-content/uploads/2015/02/after3-copia.jpg");
+  position: fixed;
+  padding: 10% 10% 10% 35%;
+  text-align: right;
+  margin: 15% 20%;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.signUpDirect p {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.signUpDirect button {
+  text-transform: uppercase;
+  background: none;
+  background-color: aliceblue;
+  border: none;
+  border-radius: 5%;
+  box-shadow: 0px 0px 10px 0px rgba(255, 255, 255);
+  padding: 5% 12%;
 }

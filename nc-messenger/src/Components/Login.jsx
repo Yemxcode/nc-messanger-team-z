@@ -3,7 +3,7 @@ import React from "react";
 export default class Login extends React.Component {
   state = {
     username: "",
-    avatar: ""
+    room: ""
   };
 
   render() {
@@ -13,12 +13,13 @@ export default class Login extends React.Component {
           onSubmit={e => {
             this.handleSubmit(e);
           }}
+          className="loginForm"
         >
-          <label>
-            Username
+          <label className="usernameLabel">
+            {/* Username */}
             <input
               type="text"
-              placeholder="username"
+              placeholder="   Username"
               value={this.state.username}
               id="username"
               className="loginFormItem"
@@ -29,12 +30,12 @@ export default class Login extends React.Component {
           </label>
           <br />
           <label>
-            Avatar URL
+            {/* Room */}
             <input
               type="text"
-              placeholder="avatar URL"
+              placeholder="   Room"
               value={this.state.avatar}
-              id="avatar"
+              id="room"
               className="loginFormItem"
               onChange={e => {
                 this.handleChange(e);
@@ -44,6 +45,10 @@ export default class Login extends React.Component {
           </label>
           <button>ENTER</button>
         </form>
+        <div className="signUpDirect">
+          <p>Don't Have an Account?</p>
+          <button>sign up</button>
+        </div>
       </>
     );
   }
@@ -57,6 +62,6 @@ export default class Login extends React.Component {
     const { username, avatar } = this.state;
     e.preventDefault();
     this.props.myFunc(username, avatar);
-    this.setState({ username: "", avatar: "" });
+    this.setState({ username: "", room: "" });
   }
 }
