@@ -3,7 +3,7 @@ import ErrorDisplay from "./ErrorDisplay";
 
 export default class SignUp extends React.Component {
   state = {
-    isLoading: true,
+    isLoading: false,
     username: "",
     profileImg: "",
     error: null

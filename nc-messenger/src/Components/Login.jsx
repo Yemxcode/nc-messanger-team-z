@@ -55,7 +55,7 @@ export default class Login extends React.Component {
 
   handleSubmit(e) {
     const { username, avatar } = this.state;
-    e.preventDefualt();
+    e.preventDefault();
     this.props.myFunc(username, avatar);
     this.setState({ username: "", avatar: "" });
   }
