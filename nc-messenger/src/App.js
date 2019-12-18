@@ -4,7 +4,6 @@ import * as api from "./api";
 import Login from "./Components/Login";
 import Signup from "./Components/Signup";
 import { Router } from "@reach/router";
-;
 
 class App extends React.Component {
   state = {
