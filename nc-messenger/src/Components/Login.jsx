@@ -50,7 +50,7 @@ export default class Login extends React.Component {
 
   handleChange(e) {
     const { id, value } = e.target;
-    this.state({ [id]: value });
+    this.setState({ [id]: value });
   }
 
   handleSubmit(e) {

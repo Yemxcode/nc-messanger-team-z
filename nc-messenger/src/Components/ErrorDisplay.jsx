@@ -1,12 +1,12 @@
-import  React from 'react';
+import React from "react";
 
-export default function ErrorDisplay  ({error}) {
- const { status, msg } = error;
+export default function ErrorDisplay({ error }) {
+  const { status, msg } = error;
 
- return (
-   <>
-     <h2>{status}</h2>
-     <h2>{msg}</h2>
-   </>
- );
+  return (
+    <>
+      <h2>{status}</h2>
+      <h2>{msg}</h2>
+    </>
+  );
 }
